@@ -1,0 +1,33 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard1.0</TargetFramework>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <PackageId>YuKu.Retryable.Strategies</PackageId>
+    <Authors>Yuriy Kushnir</Authors>
+    <Company>YuKu</Company>
+    <Product>YuKu.Retryable.Strategies</Product>
+    <Description>Implementations of retry strategies for YuKu.Retryable.</Description>
+    <AssemblyName>YuKu.Retryable.Strategies</AssemblyName>
+    <RootNamespace>YuKu.Retryable.Strategies</RootNamespace>
+    <RepositoryUrl>git@github.com:yurko7/retryable.git</RepositoryUrl>
+    <RepositoryType>git</RepositoryType>
+    <PackageTags>TPL Task Retry</PackageTags>
+    <PackageProjectUrl>https://github.com/yurko7/retryable</PackageProjectUrl>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+    <WarningsAsErrors />
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+    <WarningsAsErrors />
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Retryable\Retryable.csproj" />
+  </ItemGroup>
+
+</Project>
