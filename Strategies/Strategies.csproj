@@ -14,8 +14,8 @@
     <RepositoryType>git</RepositoryType>
     <PackageTags>TPL Task Retry</PackageTags>
     <PackageProjectUrl>https://github.com/yurko7/retryable</PackageProjectUrl>
-    <PackageLicenseUrl>https://raw.githubusercontent.com/yurko7/retryable/master/LICENSE</PackageLicenseUrl>
-    <PackageIconUrl>https://raw.githubusercontent.com/yurko7/retryable/master/Strategies/Icon.png</PackageIconUrl>
+    <PackageLicenseUrl>https://github.com/yurko7/retryable/raw/master/LICENSE</PackageLicenseUrl>
+    <PackageIconUrl>https://github.com/yurko7/retryable/raw/master/Strategies/Icon.png</PackageIconUrl>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
