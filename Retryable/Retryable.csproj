@@ -12,6 +12,8 @@
     <RepositoryUrl>git@github.com:yurko7/retryable.git</RepositoryUrl>
     <RepositoryType>git</RepositoryType>
     <PackageProjectUrl>https://github.com/yurko7/retryable</PackageProjectUrl>
+    <PackageLicenseUrl>https://raw.githubusercontent.com/yurko7/retryable/master/LICENSE</PackageLicenseUrl>
+    <PackageIconUrl>https://raw.githubusercontent.com/yurko7/retryable/master/Retryable/Icon.png</PackageIconUrl>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
