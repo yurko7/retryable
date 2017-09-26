@@ -6,7 +6,7 @@ namespace YuKu.Retryable
 {
     public static class RetryableTask
     {
-        public static async Task Retry(this Func<Task> asyncFunc, IRetryStrategy strategy, CancellationToken cancellationToken = default(CancellationToken))
+        public static async Task Retry(this Func<Task> asyncFunc, IRetryStrategy strategy, CancellationToken cancellationToken = default)
         {
             do
             {
@@ -30,7 +30,7 @@ namespace YuKu.Retryable
             while (true);
         }
 
-        public static async Task<T> Retry<T>(this Func<Task<T>> asyncFunc, IRetryStrategy strategy, CancellationToken cancellationToken = default(CancellationToken))
+        public static async Task<T> Retry<T>(this Func<Task<T>> asyncFunc, IRetryStrategy strategy, CancellationToken cancellationToken = default)
         {
             do
             {
