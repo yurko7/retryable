@@ -10,7 +10,6 @@ namespace YuKu.Retryable
         {
             do
             {
-                Exception exception;
                 try
                 {
                     await asyncFunc();
@@ -18,13 +17,11 @@ namespace YuKu.Retryable
                 }
                 catch (Exception ex)
                 {
-                    exception = ex;
-                }
-
-                Boolean canRetry = await strategy.PrepareToRetry(exception, cancellationToken);
-                if (!canRetry || cancellationToken.IsCancellationRequested)
-                {
-                    throw exception;
+                    Boolean canRetry = await strategy.PrepareToRetry(ex, cancellationToken);
+                    if (!canRetry || cancellationToken.IsCancellationRequested)
+                    {
+                        throw;
+                    }
                 }
             }
             while (true);
@@ -34,7 +31,6 @@ namespace YuKu.Retryable
         {
             do
             {
-                Exception exception;
                 try
                 {
                     T result = await asyncFunc();
@@ -42,13 +38,11 @@ namespace YuKu.Retryable
                 }
                 catch (Exception ex)
                 {
-                    exception = ex;
-                }
-
-                Boolean canRetry = await strategy.PrepareToRetry(exception, cancellationToken);
-                if (!canRetry || cancellationToken.IsCancellationRequested)
-                {
-                    throw exception;
+                    Boolean canRetry = await strategy.PrepareToRetry(ex, cancellationToken);
+                    if (!canRetry || cancellationToken.IsCancellationRequested)
+                    {
+                        throw;
+                    }
                 }
             }
             while (true);
